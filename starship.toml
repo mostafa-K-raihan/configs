@@ -825,11 +825,11 @@ python_binary = [
     "python3",
     "python2",
 ]
-format = 'via [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+format = '[(\($virtualenv\) )]($style)'
 version_format = "v${raw}"
 style = "yellow bold"
 symbol = "🐍 "
-disabled = true
+disabled = false
 detect_extensions = ["py"]
 detect_files = [
     "requirements.txt",

@@ -17,7 +17,19 @@ require("lazy").setup({
     -- import/override with your plugins
     { import = "plugins" },
 
-    { import = "lazyvim.plugins.extras.linting.eslint" },
+    {
+      import = "lazyvim.plugins.extras.linting.eslint",
+      opts = {
+        servers = {
+          eslint = {
+            settings = {
+              -- helps eslint find the eslintrc when it's placed in a subfolder instead of the cwd root
+              workingDirectory = { ["!cwd"] = true },
+            },
+          },
+        },
+      },
+    },
     { import = "lazyvim.plugins.extras.formatting.prettier" },
     {
       "numToStr/Comment.nvim",
