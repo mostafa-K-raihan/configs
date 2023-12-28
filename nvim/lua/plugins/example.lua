@@ -80,6 +80,10 @@ return {
       build = "make",
       config = function()
         require("telescope").load_extension("fzf")
+
+        --Configure FZF itself with line wrapping
+        vim.g.fzf_preview_window = { "right:40%:hidden", "ctrl-/" }
+        vim.g.fzf_layout = { window = { width = 0.9, height = 0.6, border = "rounded" } }
       end,
     },
   },
