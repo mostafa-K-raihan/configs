@@ -45,3 +45,4 @@ for entry in "${sorted_arr2[@]}"; do
 	IFS=':' read -r f_name lines <<<"$entry"
 	echo "$f_name: $lines"
 done
+echo "There are ${#sorted_arr2[@]} functions in the file $1"
