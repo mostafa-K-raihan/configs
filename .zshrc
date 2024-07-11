@@ -35,6 +35,15 @@ alias goproject="cd ~/projects/"
 alias so="source ~/.zshrc"
 alias g="git"
 alias y="yarn"
+alias c="cd"
+alias n="nvim"
+
+alias gs="g st"
+alias ga="g add"
+alias gc="g ci"
+alias gco="g co"
+alias gp="g ps"
+alias gd="g diff"
 
 alias pall='cd ~/workspace/ && find . -mindepth 1 -maxdepth 1 -type d -print -exec git -C {} stash \; -exec git -C {} ch \; -exec git -C {} pull \;'
 alias co="gh pr checkout -f"

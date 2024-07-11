@@ -1,0 +1,32 @@
+[user]
+	email = mostafa.raihan@newscred.com
+	name = raihan
+[merge]
+	conflictstyle = diff3
+[alias]
+	rb = rebase
+	br = branch
+	st = status
+  ci = commit
+  co = checkout
+  ch = "! git branch -r | grep -E '(newscred|origin)/(main|master)' | tr '/' '\n' | tail -n1 | xargs git checkout"
+	cp = cherry-pick
+	lg = log --graph --format='%C(yellow)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset'
+  spp = !git stash && git pull && git stash pop
+  gpm = "! git co master && git pull newscred master"
+	ps = push -f 
+	remotes = remote -v
+  tags = tag -l --sort="v:refname"
+  unstage = reset HEAD --
+  fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
+[color]
+	ui = auto
+[push]
+	default = simple
+[pull]
+	rebase = true
+[core]
+	editor = nvim
+	filemode = false
+[safe]
+	directory = /code
